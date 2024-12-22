@@ -18,7 +18,6 @@ public class PersonServiceTest {
     @Test
     public void testFilterByAddress() {
         List<Person> peopleLivingIn123RueA = PersonService.filterByAddress("123 Rue A");
-        // Liste attendue des personnes vivant à "123 Rue A"
         List<Person> expectedPersonsLivingIn123RueA = Arrays.asList(
                 Person.builder().firstName("Alice").familyName("Doe")
                         .birthDate(LocalDate.of(1990, 5, 12))
@@ -27,7 +26,6 @@ public class PersonServiceTest {
                         .birthDate(LocalDate.of(1985, 3, 9))
                         .address("123 Rue A").build());
 
-        // Vérification avec AssertJ
         assertThat(peopleLivingIn123RueA).containsExactlyInAnyOrderElementsOf(expectedPersonsLivingIn123RueA);
     }
 
@@ -35,7 +33,6 @@ public class PersonServiceTest {
     public void testFilterAdults() {
         List<Person> adults = PersonService.filterAdults();
 
-        // Liste attendue des adultes (18 ans ou plus)
         List<Person> expectedAdultPersons = Arrays.asList(
                 Person.builder().firstName("Alice").familyName("Doe")
                         .birthDate(LocalDate.of(1990, 5, 12))
@@ -47,7 +44,6 @@ public class PersonServiceTest {
                         .birthDate(LocalDate.of(1985, 3, 9))
                         .address("123 Rue A").build());
 
-        // Vérification avec AssertJ
         assertThat(adults).containsExactlyInAnyOrderElementsOf(expectedAdultPersons);
     }
 
@@ -59,7 +55,6 @@ public class PersonServiceTest {
         people.add(Person.builder().firstName("Hamid").familyName("Charles").build());
         people.add(Person.builder().firstName("Bernard").familyName("Charles").build());
 
-        // Tri de la liste de personnes
         Collections.sort(people);
 
         assertThat(people.get(0))

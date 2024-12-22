@@ -55,7 +55,7 @@ public class PersonService {
 
         for (Person person : people) {
             if (person.getFamilyName().equals("Bob")) {
-                people.remove(person); // Erreur ici
+                people.remove(person);
             }
         }
         return people;
@@ -67,12 +67,11 @@ public class PersonService {
         people.add(Person.builder().firstName("abdellah").familyName("Bob").build());
         people.add(Person.builder().firstName("zouani").familyName("Charlie").build());
 
-        // Suppression avec iterator (sécurisé)
         Iterator<Person> iterator = people.iterator();
         while (iterator.hasNext()) {
             Person person = iterator.next();
             if (person.getFamilyName().equals("Bob")) {
-                iterator.remove(); // Suppression sécurisée
+                iterator.remove();
             }
         }
         return people;
