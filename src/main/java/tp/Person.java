@@ -11,7 +11,6 @@ import lombok.Data;
 @Builder
 @Data
 
-
 public class Person implements Comparable < Person >{
     private String firstName;
     private String familyName;
