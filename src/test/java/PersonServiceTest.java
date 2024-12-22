@@ -73,7 +73,6 @@ public class PersonServiceTest {
         assertThatThrownBy(() -> PersonService.removeBobWithoutIterator())
                 .isInstanceOf(ConcurrentModificationException.class);
     }
-
     @Test
     public void testRemoveBobUsingIterator() {
         Set<Person> people = new HashSet<>();
