@@ -49,7 +49,7 @@ public class PersonService {
 
     public static Set<Person> removeBobWithoutIterator() {
         Set<Person> people = new HashSet<>();
-        people.add(Person.builder().firstName("abdeljabbar").familyName("alica").build());
+        people.add(Person.builder().firstName("imane").familyName("elabbadi").build());
         people.add(Person.builder().firstName("abdellah").familyName("Bob").build());
         people.add(Person.builder().firstName("zouani").familyName("Charlie").build());
 
@@ -63,7 +63,7 @@ public class PersonService {
 
     public static Set<Person> removeBobUsingIterator() {
         Set<Person> people = new HashSet<>();
-        people.add(Person.builder().firstName("abdeljabbar").familyName("alica").build());
+        people.add(Person.builder().firstName("imane").familyName("elabbadi").build());
         people.add(Person.builder().firstName("abdellah").familyName("Bob").build());
         people.add(Person.builder().firstName("zouani").familyName("Charlie").build());
 

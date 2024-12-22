@@ -82,7 +82,7 @@ public class PersonServiceTest {
     @Test
     public void testRemoveBobUsingIterator() {
         Set<Person> people = new HashSet<>();
-        people.add(Person.builder().firstName("abdeljabbar").familyName("alica").build());
+        people.add(Person.builder().firstName("imane").familyName("elabbadi").build());
         people.add(Person.builder().firstName("zouani").familyName("Charlie").build());
 
         Set<Person> peopleWithoutBob = PersonService.removeBobUsingIterator();
